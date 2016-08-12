@@ -1,0 +1,7 @@
+# conda create -p ./env python=3 --yes
+# source activate env
+# conda install -p ./env --file requirements_conda.txt --yes
+flask>=0.11
+Flask-WTF>=0.12
+requests>=2.10
+ipython>=5.0
