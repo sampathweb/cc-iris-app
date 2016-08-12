@@ -17,6 +17,8 @@ def query_iris_api(sepal_length, sepal_width, petal_length, petal_width):
     if resp.status_code == 200:
         results = resp.json()
         # Results come as Array of predictions.  Return the first item in the array
-        return results[0]
+        data = results.get("data")
+        if data:
+            return data[0]  # First Predicted Result
     else:
         logger.error("Call to Prediction API Failed with error {}".format(resp.text))
