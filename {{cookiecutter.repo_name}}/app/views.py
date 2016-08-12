@@ -21,6 +21,8 @@ class PredictForm(Form):
 
     submit = fields.SubmitField('Submit')
 
+
+@app.route('/', methods=('GET', 'POST'))
 def index():
     """Index page"""
     form = PredictForm()
