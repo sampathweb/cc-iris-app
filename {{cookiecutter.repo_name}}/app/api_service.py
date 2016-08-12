@@ -1,7 +1,7 @@
 import logging
 import requests
 
-from .config import IRIS_API_SERVER_URL
+from .config import IRIS_API_SERICE_URL
 
 logger = logging.getLogger('app')
 
@@ -13,10 +13,10 @@ def query_iris_api(sepal_length, sepal_width, petal_length, petal_width):
         "petal_length": petal_length,
         "petal_width": petal_width
     }
-    resp = requests.post(IRIS_API_SERVER_URL, json=payload)
+    resp = requests.post(IRIS_API_SERICE_URL, json=payload)
     if resp.status_code == 200:
         results = resp.json()
         # Results come as Array of predictions.  Return the first item in the array
         return results[0]
     else:
-        logger.error("Call to Prediction API Failed with error {}".resp.text)
+        logger.error("Call to Prediction API Failed with error {}".format(resp.text))

@@ -3,4 +3,4 @@ SECRET_KEY = 'you-will-never-guess'
 
 debug = True
 
-IRIS_API_SERVER_URL = "http://localhost:9000"
+IRIS_API_SERICE_URL = "http://localhost:9000/api/iris/predict"
