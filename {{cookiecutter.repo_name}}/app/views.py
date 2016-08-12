@@ -31,7 +31,6 @@ def index():
     if form.validate_on_submit():
         # store the submitted values
         submitted_data = form.data
-        logger.info(submitted_data)
 
         # Retrieve values from form
         sepal_length = float(submitted_data['sepal_length'])
